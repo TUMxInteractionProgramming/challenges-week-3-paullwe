@@ -10,6 +10,13 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
 
 </head>
 <body>
@@ -23,28 +30,28 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li onclick="switchChannel('Yummy'); favoritesSelection();">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred" onclick="favoritesSelection();">
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li class="selected" onclick="switchChannel('SevenContinents');">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred" onclick="favoritesSelection();">
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('KillerApp');">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred" onclick="favoritesSelection();">
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('FirstPersonOnMars');">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred" onclick="favoritesSelection();">
         </li>
-        <li>#Octoberfest
+        <li onclick="switchChannel('Octoberfest');">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred" onclick="favoritesSelection();">
         </li>
         <li>#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
@@ -133,8 +140,8 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
-        <small>by
+        <span id="chatName">#SevenContinents </span>
+        <small>- by
             <strong>cheeses.yard.applies</strong>
         </small>
     </h1>
